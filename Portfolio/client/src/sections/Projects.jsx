@@ -9,11 +9,12 @@ const Projects = ({ onBack }) => {
   const projects = [
     {
       id: 1,
-      name: 'PORTFÓLIO RETRO',
-      tech: ['REACT', 'FRAMER MOTION', 'CSS3'],
-      description: 'Um portfólio interativo com tema de computador retrô dos anos 80/90',
+      name: 'Portfólio',
+      tech: ['REACT', 'FRAMER MOTION', 'CSS', 'VITE', 'GIT'],
+      description: 'Um portfólio interativo que revive a nostalgia dos computadores dos anos 80/90, com uma interface inspirada no clássico Macintosh.',
       year: '2025',
-      image: '/assets/projects/portfolio.png'
+      image: '/assets/projects/portfolio.png',
+      link: 'https://portfolio-luan-pessutis-projects.vercel.app/',
     },
     {
       id: 2,

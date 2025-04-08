@@ -5,21 +5,21 @@ const Contact = ({ onBack }) => {
   const contacts = [
     { 
       type: 'Email', 
-      value: 'meu@email.com', 
-      icon: '✉️',
-      action: () => window.location.href = 'mailto:meu@email.com'
+      value: 'luanpessuti@gmail.com', 
+      icon: '📧',
+      action: () => window.location.href = 'mailto:luanpessuti@email.com'
     },
     { 
       type: 'WhatsApp', 
-      value: '(XX) XXXX-XXXX', 
+      value: '(41) 99935-6005', 
       icon: '📱',
-      action: () => window.open('https://wa.me/SEUNUMERO')
+      action: () => window.open('https://wa.me/+5541999356005', '_blank', 'noopener,noreferrer')
     },
     { 
       type: 'LinkedIn', 
-      value: '/meu-linkedin', 
+      value: '@luanpessuti', 
       icon: '🔗',
-      action: () => window.open('https://linkedin.com/in/meu-linkedin', '_blank', 'noopener,noreferrer')
+      action: () => window.open('https://www.linkedin.com/in/luanpessuti/', '_blank', 'noopener,noreferrer')
     }
   ];
 

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+.mac-projects-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  color: var(--mac-black);
+}
+
+.mac-projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
+  color: var(--mac-white);
+  margin-bottom: 20px;
+}
+
+.mac-projects-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mac-folders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 15px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.mac-project-detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mac-project-header {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
+  color: var(--mac-white);
+  margin-bottom: 15px;
+}
+
+.mac-back-folder {
+  background: none;
+  border: none;
+  color: var(--mac-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.mac-back-folder:hover {
+  text-decoration: underline;
+}
+
+.mac-project-title-container {
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+}
+
+.mac-project-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.mac-project-year {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.mac-project-content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 0 15px 15px;
+}
+
+.mac-project-image-container {
+  flex: 0 0 50%;
+  border: 2px solid var(--mac-black);
+  box-shadow: 4px 4px 0 var(--mac-gray);
+  background: white;
+  padding: 5px;
+}
+
+.mac-project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--mac-gray);
+}
+
+.mac-project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mac-section-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--mac-blue);
+  margin-bottom: 8px;
+}
+
+.mac-project-text {
+  font-size: 13px;
+  line-height: 1.5;
+  background: var(--mac-white);
+  border: 1px solid var(--mac-gray);
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.mac-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mac-tech-tag {
+  background: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  box-shadow: 2px 2px 0 var(--mac-gray);
+}
+
+.btn-project {
+  background: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--mac-gray);
+  align-self: flex-end;
+  margin-top: 15px;
+  transition: all 0.2s ease;
+}
+
+.btn-project:hover {
+  background: var(--mac-blue);
+  color: var(--mac-white);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .mac-project-content {
+    flex-direction: column;
+  }
+
+  .mac-project-image-container {
+    flex: 0 0 auto;
+    height: 200px;
+  }
+
+  .mac-folders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
