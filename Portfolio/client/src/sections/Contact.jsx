@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import './Contact.css';
+import './contact.css'; // Ajuste para o nome real do arquivo
 
 const Contact = ({ onBack }) => {
   const contacts = [
@@ -7,7 +7,7 @@ const Contact = ({ onBack }) => {
       type: 'Email', 
       value: 'luanpessuti@gmail.com', 
       icon: '📧',
-      action: () => window.location.href = 'mailto:luanpessuti@email.com'
+      action: () => window.location.href = 'mailto:luanpessuti@gmail.com' // Email corrigido
     },
     { 
       type: 'WhatsApp', 
@@ -34,9 +34,19 @@ const Contact = ({ onBack }) => {
       <div className="mac-contact-header">
         <h2 className="mac-contact-title">CONTATO</h2>
         <div className="mac-window-controls">
-          <button className="mac-close-btn" onClick={onBack} />
-          <button className="mac-minimize-btn" />
-          <button className="mac-zoom-btn" />
+          <button 
+            className="mac-close-btn" 
+            onClick={onBack}
+            aria-label="Fechar contatos"
+          />
+          <button 
+            className="mac-minimize-btn" 
+            aria-label="Minimizar"
+          />
+          <button 
+            className="mac-zoom-btn" 
+            aria-label="Maximizar"
+          />
         </div>
       </div>
 
@@ -46,7 +56,10 @@ const Contact = ({ onBack }) => {
             key={contact.type}
             className="mac-contact-item"
             whileHover={{ x: 5 }}
+            whileTap={{ x: 5 }} // Para mobile
             onClick={contact.action}
+            role="button" // Melhora acessibilidade
+            tabIndex={0} // Permite foco via teclado
           >
             <div className="mac-contact-icon">{contact.icon}</div>
             <div className="mac-contact-info">
