@@ -1,0 +1,18 @@
+/* SkillBadge.css */
+.mac-skill-badge {
+    background: var(--mac-white);
+    border: 1px solid var(--mac-black);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 0 var(--mac-gray);
+    cursor: default;
+    font-family: 'San Francisco Display', sans-serif;
+  }
+  
+  .mac-skill-badge:hover {
+    background: var(--mac-blue);
+    color: var(--mac-white);
+    transform: translateY(-1px);
+  }

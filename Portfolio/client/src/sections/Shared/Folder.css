@@ -1,0 +1,41 @@
+/* Folder.css */
+.mac-folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .mac-folder-icon {
+    width: 64px;
+    height: 54px;
+    background: var(--mac-white);
+    border: 2px solid var(--mac-black);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 4px 4px 0 var(--mac-gray);
+    margin-bottom: 8px;
+  }
+  
+  .mac-folder-tab {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    width: 30px;
+    height: 10px;
+    background: var(--mac-white);
+    border: 2px solid var(--mac-black);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .mac-folder-label {
+    font-size: 12px;
+    text-align: center;
+    color: var(--mac-black);
+    font-family: 'San Francisco Display', sans-serif;
+    font-weight: bold;
+    word-break: break-word;
+    max-width: 100%;
+  }

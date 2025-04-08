@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Variáveis de cor Macintosh */
+:root {
+  --mac-beige: #F7F7D6;
+  --mac-dark-beige: #E0D8B0;
+  --mac-blue: #2A5BD7;
+  --mac-dark-blue: #1A3A8B;
+  --mac-black: #000000;
+  --mac-white: #FFFFFF;
+  --mac-gray: #808080;
+  --mac-dark-gray: #404040;
+  --mac-red: #D70000;
+  --mac-yellow: #FFCC00;
+  --mac-green: #00CC00;
+}
+
+/* Estilos base */
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+}
+
+/* Tela CRT com tema Mac */
+.crt-screen {
+  background-color: var(--mac-beige);
+  background-image: 
+    linear-gradient(var(--mac-dark-beige) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mac-dark-beige) 1px, transparent 1px);
+  background-size: 10px 10px;
+  position: absolute;
+  width: 48vw;
+  height: calc(50vw * 0.75);
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  overflow: hidden !important;
+  z-index: 2;
+  border-radius: 0;
+  box-shadow: 0 0 0 4px var(--mac-dark-gray), 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.crt-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+}
+
+/* Efeito CRT (opcional) */
+.crt-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(18, 16, 16, 0.1) 0%,
+      rgba(0, 255, 255, 0.05) 10%,
+      rgba(18, 16, 16, 0.1) 20%);
+  background-size: 100% 0.5vh;
+  pointer-events: none;
+  z-index: 4;
+  animation: scanline 6s linear infinite;
+}
+
+@keyframes scanline {
+  from { background-position: 0 0; }
+  to { background-position: 0 100%; }
+}
+
+/* Tela de inicialização */
+.boot-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.retro-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  color: var(--mac-black);
+  margin-bottom: 2rem;
+}
+
+.mac-start-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: 2px 2px 0 var(--mac-black);
+  cursor: pointer;
+}
+
+.mac-start-button:hover {
+  background: var(--mac-blue);
+  color: var(--mac-white);
+}
+
+/* Barra de menu */
+.mac-menu-bar {
+  height: 20px;
+  background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
+  color: var(--mac-white);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 12px;
+  user-select: none;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 4px 4px 0 var(--mac-gray);
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+}
+
+.mac-apple-icon {
+  font-weight: bold;
+  margin-right: 15px;
+  max-width: 15px;
+}
+
+.mac-menu-item {
+  padding: 0 8px;
+  cursor: default;
+}
+
+.mac-menu-time {
+  margin-left: auto;
+}
+
+/* Área de desktop */
+.mac-desktop {
+  padding: 20px;
+  height: calc(50% - 20px);
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);	
+  border-radius: 0 0 6px 6px;
+  box-shadow: 4px 4px 0 var(--mac-gray);
+  margin-top: 2rem;
+}
+
+.mac-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.mac-folder-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mac-folder-img {
+  width: 32px;
+  height: 32px;
+  background: var(--mac-blue);
+  border: 1px solid var(--mac-black);
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.mac-folder-label {
+  font-size: 12px;
+  text-align: center;
+  color: var(--mac-black);
+}
+
+.mac-desktop-text {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Inter', sans-serif;
+  color: var(--mac-black);
+  text-shadow: 1px 1px 0 var(--mac-white);
+  font-size: 14px;
+  text-align: right;
+  user-select: none;
+}
+
+/* Janelas */
+.mac-window {
+  background: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--mac-gray);
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  overflow: auto;
+  z-index: 10;
+}
+
+.mac-window-header {
+  background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
+  color: var(--mac-white);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.mac-window-controls {
+  display: flex;
+  gap: 6px;
+  margin-right: 8px;
+}
+
+.mac-close-btn, .mac-minimize-btn, .mac-zoom-btn {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--mac-black);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mac-close-btn { background: var(--mac-red); }
+.mac-minimize-btn { background: var(--mac-yellow); }
+.mac-zoom-btn { background: var(--mac-green); }
+
+.mac-window-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.mac-window-content {
+  padding: 15px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100% - 40px);
+  padding-bottom: 20px;
+}
+
+/* Loading screen */
+.mac-loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mac-progress-container {
+  width: 50%;
+  background: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.mac-progress-bar {
+  height: 16px;
+  background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
+  transition: width 0.3s ease;
+}
+
+.mac-progress-text {
+  font-family: 'Inter', sans-serif;
+  margin-top: 8px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (min-width: 768px) and (max-width: 1929px) {
+  .crt-screen {
+    width: 48vw;
+    height: calc(37.2vw * 0.75);
+  }
+  
+  .mac-progress-container {
+    width: 80%;
+  }
+
+  .mac-start-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .retro-text {
+    font-size: 4rem;
+    margin-bottom: -10%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .crt-screen {
+    width: 48vw;
+    height: calc(37.2vw * 0.75);
+  }
+  
+  .retro-text {
+    font-size: 4rem;
+  }
+
+  .mac-desktop {
+    padding: 40px;
+    height: calc(40% - 40px);
+    width: calc(200% - 40px);
+    margin-top: 150px;
+    margin-left: -60%;
+  }
+
+  .mac-menu-bar {
+    padding: 0 20px;
+    font-size: 16px;
+    width: calc(212.8% - 40px);
+    margin-left: -60%;
+    margin-top: 100px;
+    margin-bottom: -45.5%;
+  }
+
+  .mac-progress-container {
+    width: 80%;
+  }
+}
