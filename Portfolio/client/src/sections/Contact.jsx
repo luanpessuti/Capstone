@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import './contact.css'; // Ajuste para o nome real do arquivo
+import './Contact.css';
 
 const Contact = ({ onBack }) => {
   const contacts = [

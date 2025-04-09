@@ -23,7 +23,7 @@ const Hero = () => {
       }
 
       // Efeito de digitação
-      const targetText = "Portfólio";
+      const targetText = "Mac OS";
       for (let i = 0; i <= targetText.length; i++) {
         await new Promise(resolve => setTimeout(resolve, 150));
         setTypedText(targetText.substring(0, i));
@@ -190,7 +190,7 @@ const Hero = () => {
             {/* Janelas de conteúdo */}
             {view === 'about-me' && (
               <MacWindow 
-                title="sobre mim" 
+                title="About Me" 
                 onClose={() => setView('os')}
                 key="about-me"
               >
@@ -200,7 +200,7 @@ const Hero = () => {
   
             {view === 'projects' && (
               <MacWindow 
-                title="projetos" 
+                title="Projects" 
                 onClose={() => setView('os')}
                 key="projects"
               >
@@ -208,7 +208,7 @@ const Hero = () => {
               </MacWindow>
             )}
   
-            {view === 'contato' && (
+            {view === 'contact' && (
               <MacWindow 
                 title="Contact" 
                 onClose={() => setView('os')}
