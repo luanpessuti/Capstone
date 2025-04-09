@@ -34,7 +34,7 @@
 
 .crt-screen {
   background-color: var(--mac-beige);
-  background-image: 
+  background-image:
     linear-gradient(var(--mac-dark-beige) 1px, transparent 1px),
     linear-gradient(90deg, var(--mac-dark-beige) 1px, transparent 1px);
   background-size: 10px 10px;
@@ -79,8 +79,13 @@
 }
 
 @keyframes scanline {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 100%;
+  }
 }
 
 /* Tela de inicialização */
@@ -118,18 +123,23 @@
 }
 
 .mac-menu-bar {
-  height: 20px;
+  position: relative;
+  width: 200vw;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Estilos visuais mantidos */
   background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
-  color: var(--mac-white);
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  font-size: 12px;
-  user-select: none;
   border-radius: 6px 6px 0 0;
   box-shadow: 4px 4px 0 var(--mac-gray);
-  margin-top: 2rem;
-  margin-bottom: -2rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 16px;
+  color: var(--mac-white);
+  user-select: none;
+  isolation: isolate; /* Cria novo contexto de empilhamento */
+  contain: layout; /* Melhora renderização */
 }
 
 .mac-apple-icon {
@@ -148,13 +158,21 @@
 }
 
 .mac-desktop {
-  padding: 20px;
-  height: calc(50% - 20px);
+  padding: 40px;
+  height: 40vh;
+  /* Ou altura fixa se preferir */
+  width: 200vw;
+  /* Viewport width é mais confiável que % */
+  position: relative;
   background-color: var(--mac-white);
-  border: 1px solid var(--mac-black);	
+  border: 1px solid var(--mac-black);
   border-radius: 0 0 6px 6px;
   box-shadow: 4px 4px 0 var(--mac-gray);
   margin-top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2px;
+  box-sizing: border-box;
 }
 
 .mac-icons-grid {
@@ -230,7 +248,9 @@
   margin-right: 8px;
 }
 
-.mac-close-btn, .mac-minimize-btn, .mac-zoom-btn {
+.mac-close-btn,
+.mac-minimize-btn,
+.mac-zoom-btn {
   width: 12px;
   height: 12px;
   border: 1px solid var(--mac-black);
@@ -238,9 +258,17 @@
   cursor: pointer;
 }
 
-.mac-close-btn { background: var(--mac-red); }
-.mac-minimize-btn { background: var(--mac-yellow); }
-.mac-zoom-btn { background: var(--mac-green); }
+.mac-close-btn {
+  background: var(--mac-red);
+}
+
+.mac-minimize-btn {
+  background: var(--mac-yellow);
+}
+
+.mac-zoom-btn {
+  background: var(--mac-green);
+}
 
 .mac-window-title {
   flex-grow: 1;
@@ -295,7 +323,7 @@
     width: 48vw;
     height: calc(37.2vw * 0.75);
   }
-  
+
   .mac-progress-container {
     width: 80%;
   }
@@ -309,6 +337,22 @@
     font-size: 4rem;
     margin-bottom: -10%;
   }
+
+  .mac-desktop {
+    width: 100%;
+    left: 0;
+    transform: none;
+    top: 19.2%;
+  }
+
+  .mac-menu-bar {
+    width: 87%;
+    left: 0;
+    transform: none;
+    top: 20%;
+
+  }
+
 }
 
 @media (min-width: 1920px) {
@@ -316,29 +360,26 @@
     width: 48vw;
     height: calc(37.2vw * 0.75);
   }
-  
+
   .retro-text {
     font-size: 4rem;
   }
 
   .mac-desktop {
-    padding: 40px;
-    height: calc(40% - 40px);
-    width: calc(200% - 40px);
-    margin-top: 150px;
-    margin-left: -60%;
+    width: 100%;
+    left: 0;
+    transform: none;
+    top: 19.8%;
   }
 
   .mac-menu-bar {
-    padding: 0 20px;
-    font-size: 16px;
-    width: calc(212.8% - 40px);
-    margin-left: -60%;
-    margin-top: 100px;
-    margin-bottom: -45.5%;
+    width: 87.05%;
+    left: 0;
+    transform: none;
+    top: 20%;
   }
 
   .mac-progress-container {
-    width: 80%;
+    width: 100%;
   }
 }
