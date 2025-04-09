@@ -23,7 +23,7 @@ const Hero = () => {
       }
 
       // Efeito de digitação
-      const targetText = "Mac OS";
+      const targetText = "Portfólio";
       for (let i = 0; i <= targetText.length; i++) {
         await new Promise(resolve => setTimeout(resolve, 150));
         setTypedText(targetText.substring(0, i));

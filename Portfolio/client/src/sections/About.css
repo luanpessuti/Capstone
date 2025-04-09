@@ -53,6 +53,7 @@
   color: var(--mac-blue);
   text-shadow: 2px 2px 0 var(--mac-gray);
   font-weight: 700;
+  text-align: center;
 }
 
 .mac-about-text {
@@ -96,7 +97,6 @@
   padding: 18px;
 }
 
-/* Botão de Voltar */
 .mac-back-button {
   background: var(--mac-white);
   border: 2px solid var(--mac-black);

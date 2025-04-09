@@ -15,7 +15,6 @@
   --mac-green: #00CC00;
 }
 
-/* Estilos base */
 .hero {
   position: relative;
   width: 100vw;
@@ -33,7 +32,6 @@
   object-fit: cover;
 }
 
-/* Tela CRT com tema Mac */
 .crt-screen {
   background-color: var(--mac-beige);
   background-image: 
@@ -64,7 +62,6 @@
   align-items: flex;
 }
 
-/* Efeito CRT (opcional) */
 .crt-effect {
   position: absolute;
   top: 0;
@@ -111,14 +108,15 @@
   padding: 8px 16px;
   box-shadow: 2px 2px 0 var(--mac-black);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .mac-start-button:hover {
   background: var(--mac-blue);
   color: var(--mac-white);
+  transform: translateY(-1px);
 }
 
-/* Barra de menu */
 .mac-menu-bar {
   height: 20px;
   background: linear-gradient(to right, var(--mac-blue), var(--mac-dark-blue));
@@ -149,7 +147,6 @@
   margin-left: auto;
 }
 
-/* Área de desktop */
 .mac-desktop {
   padding: 20px;
   height: calc(50% - 20px);
@@ -201,7 +198,6 @@
   user-select: none;
 }
 
-/* Janelas */
 .mac-window {
   background: var(--mac-white);
   border: 2px solid var(--mac-black);
@@ -263,8 +259,9 @@
   padding-bottom: 20px;
 }
 
-/* Loading screen */
+
 .mac-loading-screen {
+  font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
