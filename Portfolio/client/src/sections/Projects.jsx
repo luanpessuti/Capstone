@@ -9,12 +9,12 @@ const Projects = ({ onBack }) => {
   const projects = [
     {
       id: 1,
-      name: 'Portfólio',
-      tech: ['REACT', 'FRAMER MOTION', 'CSS', 'VITE', 'GIT'],
-      description: 'Um portfólio interativo que revive a nostalgia dos computadores dos anos 80/90, com uma interface inspirada no clássico Macintosh.',
+      name: 'Code Café',
+      tech: ['REACT','VITE', 'GIT', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Node.js'],
+      description: 'O Code Café é um blog técnico temático que mistura programação com a estética de uma cafeteria retrô. O projeto apresenta conceitos de tecnologia e desenvolvimento web de forma leve e criativa, como se fosse um papo entre devs em um café. Possui seções como “Dicas do Barista” e “Receita do Dia”, que entregam conteúdos técnicos com visual personalizado e interativo.',
       year: '2025',
-      image: '/assets/projects/portfolio.png',
-      link: 'https://portfolio-luan-pessutis-projects.vercel.app/',
+      image: '/assets/projects/code-cafe.png',
+      link: 'https://code-cafe-lp.vercel.app/',
     },
     {
       id: 2,
@@ -42,7 +42,16 @@ const Projects = ({ onBack }) => {
       year: '2025',
       image: '/assets/projects/saimon.png',
       link: 'https://luanpessuti.github.io/SimonGame/'
-    }
+    },
+    {
+      id: 5,
+      name: 'Portfólio',
+      tech: ['REACT', 'FRAMER MOTION', 'CSS', 'VITE', 'GIT'],
+      description: 'Um portfólio interativo que revive a nostalgia dos computadores dos anos 80/90, com uma interface inspirada no clássico Macintosh.',
+      year: '2025',
+      image: '/assets/projects/portfolio.png',
+      link: 'https://portfolio-luan-pessutis-projects.vercel.app/',
+    },
   ];
 
   return (
