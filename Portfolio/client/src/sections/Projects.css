@@ -161,8 +161,53 @@
 }
 
 @media (max-width: 768px) {
+
+.mac-projects-header {
+    height: 10px;
+    margin-bottom: 5px;
+  }
+
+  .mac-projects-title {
+    font-size: 8px;
+  }
+
+  .mac-project-title-container {
+    height: 20px;
+  }
+  
+  .mac-back-folder {
+    font-size: 5px;
+  }
+  
+  .mac-section-title {
+    font-size: 10px;
+  }
+
+  .mac-project-text {
+    font-size: 8px;
+  }
+
+  .btn-project {
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+  
+  .mac-tech-tags {
+    gap: 4px;
+  }
+
+  .mac-tech-tag {
+    font-size: 8px;
+    padding: 0;
+  }
+
+  .mac-project-title, span.mac-project-year {
+    font-size: 8px;
+  }
+
   .mac-project-content {
     flex-direction: column;
+    padding: 5px;
   }
 
   .mac-project-image-container {
@@ -171,6 +216,21 @@
   }
 
   .mac-folders-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+
+}
+
+@media (min-width: 1920px) {
+
+  .mac-projects-view {
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mac-folders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
 }

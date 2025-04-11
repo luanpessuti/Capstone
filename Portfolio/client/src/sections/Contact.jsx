@@ -34,20 +34,7 @@ const Contact = ({ onBack }) => {
       <div className="mac-contact-header">
         <h2 className="mac-contact-title">CONTATO</h2>
         <div className="mac-window-controls">
-          <button 
-            className="mac-close-btn" 
-            onClick={onBack}
-            aria-label="Fechar contatos"
-          />
-          <button 
-            className="mac-minimize-btn" 
-            aria-label="Minimizar"
-          />
-          <button 
-            className="mac-zoom-btn" 
-            aria-label="Maximizar"
-          />
-        </div>
+      </div>
       </div>
 
       <div className="mac-contact-box">

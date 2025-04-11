@@ -283,7 +283,6 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(100% - 40px);
   padding-bottom: 20px;
 }
 
@@ -362,7 +361,7 @@
   }
 
   .retro-text {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .mac-desktop {
@@ -381,5 +380,114 @@
 
   .mac-progress-container {
     width: 100%;
+  }
+
+  .mac-start-button {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .crt-screen {
+    width: 47vw;
+    height: calc(35.5vw * 0.75);
+    top: 7.4%;
+  }
+
+  .retro-text {
+    font-size: 1.8rem;
+    margin-bottom: -1rem;
+    text-align: center;
+  }
+
+  .mac-start-button {
+    font-size: 8px;
+    padding: 5px 12px;
+  }
+
+  .mac-menu-bar {
+    flex-wrap: wrap;
+    font-size: 7px;
+    height: auto;
+    padding: 2px 4px;
+    width: 96%;
+    top: 10%;
+  }
+
+  .mac-desktop {
+    width: 100%;
+    height: 60%;
+    padding: 20px 10px;
+    top: 8%;
+    left: 0%;
+  }
+
+  .mac-icons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 15px;
+  }
+
+  .mac-folder-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    bottom: 25%;
+  }
+
+  .mac-folder-img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .mac-folder-label {
+    font-size: 5.5px;
+  }
+
+  .mac-desktop-text {
+    font-size: 10px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .mac-window {
+    width: 95%;
+    margin: 2px auto;
+    height: auto;
+    gap: 2px;
+  }
+
+  .mac-window-header {
+    font-size: 8px;
+    flex-wrap: wrap;
+    height: 8%;
+    padding: 2px 4px;
+  }
+
+  .mac-close-btn,
+  .mac-minimize-btn,
+  .mac-zoom-btn {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  
+  .mac-window-content {
+    padding: 2px;
+    font-size: 10px;
+  }
+
+  .mac-progress-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .mac-progress-text {
+    font-size: 10px;
+  }
+
+  .mac-progress-bar {
+    height: 12px;
   }
 }

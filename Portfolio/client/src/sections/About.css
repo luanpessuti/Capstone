@@ -163,3 +163,48 @@
 
   
 }
+
+@media (max-width: 767px) {
+  .mac-about-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mac-about-photo {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .mac-about-title {
+    font-size: 1rem;
+    margin: 0;
+    text-shadow: 1px 1px 0 var(--mac-gray);
+  }
+
+  .mac-about-text {
+    font-size: 0.5rem;
+    padding: 10px;
+    margin-top: -100px;
+  }
+
+  .mac-skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .mac-skills-header {
+    font-size: 0.4rem;
+    height: 5px;
+  }
+
+  .mac-content-view {
+    padding: 0;
+  }
+
+  .mac-back-button {
+    font-size: 0.5rem;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+
+}

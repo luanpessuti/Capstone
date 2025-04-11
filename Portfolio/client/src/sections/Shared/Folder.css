@@ -39,3 +39,43 @@
     word-break: break-word;
     max-width: 100%;
   }
+
+  @media (max-width: 768px) {
+    .mac-folder-icon {
+      width: 48px;
+      height: 40px;
+    }
+
+    .mac-folder-tab {
+      width: 14px;
+      height: 7px;
+      left: 2px;
+    }
+  
+    .mac-folder-label {
+      font-size: 10px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .mac-folder {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mac-folder-icon {
+      width: 56px;
+      height: 46px;
+    }
+
+    .mac-folder-tab {
+      width: 20px;
+      height: 8px;
+      left: 6px;
+    }
+  
+    .mac-folder-label {
+      font-size: 11px;
+    }
+    
+  }

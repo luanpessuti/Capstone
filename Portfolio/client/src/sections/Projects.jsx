@@ -67,9 +67,6 @@ const Projects = ({ onBack }) => {
           <div className="mac-projects-header">
             <h2 className="mac-projects-title">MEUS PROJETOS</h2>
             <div className="mac-window-controls">
-              <button className="mac-close-btn" onClick={onBack} />
-              <button className="mac-minimize-btn" />
-              <button className="mac-zoom-btn" />
             </div>
           </div>
 

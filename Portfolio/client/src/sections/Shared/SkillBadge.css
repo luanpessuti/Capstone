@@ -16,3 +16,10 @@
     color: var(--mac-white);
     transform: translateY(-1px);
   }
+
+  @media (max-width: 767px) {
+    .mac-skill-badge {
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+  }
