@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Mail, Smartphone, Linkedin, Github } from 'lucide-react'; // Ícones Lucide
 import './Contact.css';
 
 const Contact = ({ onBack }) => {
@@ -6,20 +7,26 @@ const Contact = ({ onBack }) => {
     { 
       type: 'Email', 
       value: 'luanpessuti@gmail.com', 
-      icon: '📧',
-      action: () => window.location.href = 'mailto:luanpessuti@gmail.com' // Email corrigido
+      icon: <Mail size={24} />,
+      action: () => window.location.href = 'mailto:luanpessuti@gmail.com'
     },
     { 
       type: 'WhatsApp', 
       value: '(41) 99935-6005', 
-      icon: '📱',
+      icon: <Smartphone size={24} />,
       action: () => window.open('https://wa.me/+5541999356005', '_blank', 'noopener,noreferrer')
     },
     { 
       type: 'LinkedIn', 
       value: '@luanpessuti', 
-      icon: '🔗',
+      icon: <Linkedin size={24} />,
       action: () => window.open('https://www.linkedin.com/in/luanpessuti/', '_blank', 'noopener,noreferrer')
+    },
+    { 
+      type: 'GitHub', 
+      value: '@luanpessuti', 
+      icon: <Github size={24} />,
+      action: () => window.open('https://github.com/luanpessuti', '_blank', 'noopener,noreferrer')
     }
   ];
 
@@ -33,8 +40,7 @@ const Contact = ({ onBack }) => {
     >
       <div className="mac-contact-header">
         <h2 className="mac-contact-title">CONTATO</h2>
-        <div className="mac-window-controls">
-      </div>
+        <div className="mac-window-controls" />
       </div>
 
       <div className="mac-contact-box">
@@ -43,10 +49,10 @@ const Contact = ({ onBack }) => {
             key={contact.type}
             className="mac-contact-item"
             whileHover={{ x: 5 }}
-            whileTap={{ x: 5 }} // Para mobile
+            whileTap={{ x: 5 }}
             onClick={contact.action}
-            role="button" // Melhora acessibilidade
-            tabIndex={0} // Permite foco via teclado
+            role="button"
+            tabIndex={0}
           >
             <div className="mac-contact-icon">{contact.icon}</div>
             <div className="mac-contact-info">
