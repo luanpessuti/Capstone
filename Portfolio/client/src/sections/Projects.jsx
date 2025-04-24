@@ -9,30 +9,30 @@ const Projects = ({ onBack }) => {
   const projects = [
     {
       id: 1,
+      name: 'DUCK Studio - Landing Page',
+      tech: ['Next.js','TypeScript', 'Tailwind', 'Framer Motion','GIT'],
+      description: 'DUCK é uma landing page criativa e conceitual para uma agência fictícia de design e desenvolvimento digital que foi fortemente inspirada na identidade visual da milli.agency',
+      year: '2025',
+      image: '/assets/projects/DuckProject.png',
+      link: 'https://duck-studios.vercel.app/',
+    },
+    {
+      id: 2,
       name: 'Code Café',
       tech: ['REACT','VITE', 'GIT', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Node.js'],
       description: 'O Code Café é um blog técnico temático que mistura programação com a estética de uma cafeteria retrô. O projeto apresenta conceitos de tecnologia e desenvolvimento web de forma leve e criativa, como se fosse um papo entre devs em um café. Possui seções como “Dicas do Barista” e “Receita do Dia”, que entregam conteúdos técnicos com visual personalizado e interativo.',
       year: '2025',
-      image: '/assets/projects/code-cafe.png',
+      image: '/assets/projects/codecafe.png',
       link: 'https://code-cafe-lp.vercel.app/',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Ty.Pe Editor',
       tech: ['REACT','HTML','CSS','TIPTAP','EXPRESS','NODEJS','GIT'],
       description: 'Ty.Pe Editor - Um editor de texto rich-text moderno focado em experiência do usuário, oferecendo formatação em tempo real.',
       year: '2025',
-      image: '/assets/projects/editor.png',
+      image: '/assets/projects/type-editor.png',
       link: 'https://ty-pe-editor.vercel.app/'
-    },
-    {
-      id: 3,
-      name: 'Supernova Blog',
-      tech: ['REACT','EJS','BOOTSTRAP','ANIMATE','EXPRESS','NODEJS','GIT'],
-      description: 'Blog desenvolvido com Node.js, Express e EJS para renderização dinâmica, utilizando Bootstrap para design responsivo. Posts organizados por autor e data, com sistema pronto para expansão.',
-      year: '2025',
-      image: '/assets/projects/blog.png',
-      link: 'https://supernova-blog.onrender.com/'
     },
     {
       id: 4,
@@ -110,6 +110,7 @@ const ProjectDetail = ({ project, onBack }) => (
     </div>
 
     <div className="mac-project-content">
+      {/* Imagem do Projeto */}
       <div className="mac-project-image-container">
         <img
           src={project.image}
@@ -119,12 +120,14 @@ const ProjectDetail = ({ project, onBack }) => (
       </div>
 
       <div className="mac-project-info">
+        {/* Descrição e Link */}
         <div className="mac-project-description">
           <h4 className="mac-section-title">DESCRIÇÃO:</h4>
           <p className="mac-project-text">{project.description}</p>
           <a className='btn-project' href={project.link} target="_blank" rel="noopener noreferrer">Ver projeto</a>
         </div>
 
+        {/* Tecnologias */}
         <div className="mac-project-tech">
           <h4 className="mac-section-title">TECNOLOGIAS:</h4>
           <div className="mac-tech-tags">

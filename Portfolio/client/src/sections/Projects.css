@@ -81,13 +81,16 @@
 
 .mac-project-content {
   display: flex;
-  flex: 1;
+  flex-direction: column; /* Para dispositivos móveis e telas menores */
   gap: 20px;
   padding: 0 15px 15px;
 }
 
 .mac-project-image-container {
-  flex: 0 0 50%;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 500px; /* Max largura para manter o formato retangular */
+  height: 300px;  /* Altura fixa para manter o formato */
   border: 2px solid var(--mac-black);
   box-shadow: 4px 4px 0 var(--mac-gray);
   background: white;
@@ -97,12 +100,11 @@
 .mac-project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* Mantém a imagem proporcional */
   border: 1px solid var(--mac-gray);
 }
 
 .mac-project-info {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -122,6 +124,16 @@
   border: 1px solid var(--mac-gray);
   padding: 10px;
   border-radius: 2px;
+}
+
+.mac-project-description {
+  margin-bottom: 15px;
+}
+
+.mac-project-description h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--mac-blue);
 }
 
 .mac-tech-tags {
@@ -149,7 +161,7 @@
   font-weight: 600;
   cursor: pointer;
   box-shadow: 3px 3px 0 var(--mac-gray);
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: 15px;
   transition: all 0.2s ease;
 }
@@ -161,6 +173,15 @@
 }
 
 @media (max-width: 768px) {
+  .mac-project-content {
+    flex-direction: column; /* Ajusta o layout para dispositivos móveis */
+    padding: 5px;
+  }
+
+  .mac-project-image-container {
+    max-width: 100%;
+    height: 200px;
+  }
 
 .mac-projects-header {
     height: 10px;
@@ -231,6 +252,10 @@
 
   .mac-folders-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .mac-project-image-container {
+    height: 300px; /* Mantém a altura para telas grandes */
   }
 
 }
