@@ -9,24 +9,33 @@ const Projects = ({ onBack }) => {
   const projects = [
     {
       id: 1,
+      name: 'FURIA Live Chat',
+      tech: ['Next.js','React', 'TypeScript', 'Tailwind', 'Framer Motion','MongodDB', 'GIT'],
+      description: 'Um componente de chat ao vivo desenvolvido para um cenário fictício da equipe de eSports FURIA, combinando transmissão de vídeo, painel de partidas e mensagens em tempo real. O foco foi criar uma experiência visual impactante, responsiva e com layout dinâmico, especialmente adaptado para diferentes tamanhos de tela.',
+      year: '2025',
+      image: '/assets/projects/case-furiagg.png',
+      link: 'https://case01furia.vercel.app/',
+    },
+    {
+      id: 2,
       name: 'DUCK Studio - Landing Page',
-      tech: ['Next.js','TypeScript', 'Tailwind', 'Framer Motion','GIT'],
+      tech: ['Next.js','React', 'TypeScript', 'Tailwind', 'Framer Motion','GIT'],
       description: 'DUCK é uma landing page criativa e conceitual para uma agência fictícia de design e desenvolvimento digital que foi fortemente inspirada na identidade visual da milli.agency',
       year: '2025',
       image: '/assets/projects/DuckProject.png',
       link: 'https://duck-studios.vercel.app/',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Code Café',
-      tech: ['REACT','VITE', 'GIT', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Node.js'],
+      tech: ['REACT','VITE', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'GIT'],
       description: 'O Code Café é um blog técnico temático que mistura programação com a estética de uma cafeteria retrô. O projeto apresenta conceitos de tecnologia e desenvolvimento web de forma leve e criativa, como se fosse um papo entre devs em um café. Possui seções como “Dicas do Barista” e “Receita do Dia”, que entregam conteúdos técnicos com visual personalizado e interativo.',
       year: '2025',
       image: '/assets/projects/codecafe.png',
       link: 'https://code-cafe-lp.vercel.app/',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Ty.Pe Editor',
       tech: ['REACT','HTML','CSS','TIPTAP','EXPRESS','NODEJS','GIT'],
       description: 'Ty.Pe Editor - Um editor de texto rich-text moderno focado em experiência do usuário, oferecendo formatação em tempo real.',
@@ -35,7 +44,7 @@ const Projects = ({ onBack }) => {
       link: 'https://ty-pe-editor.vercel.app/'
     },
     {
-      id: 4,
+      id: 5,
       name: 'Saimon Game',
       tech: ['HTML','CSS','JAVASCRIPT','JQUERY'],
       description: 'Jogo de memória com sequências de cores e sons, desenvolvido com JavaScript/jQuery.',
@@ -44,7 +53,7 @@ const Projects = ({ onBack }) => {
       link: 'https://luanpessuti.github.io/SimonGame/'
     },
     {
-      id: 5,
+      id: 6,
       name: 'Portfólio',
       tech: ['REACT', 'FRAMER MOTION', 'CSS', 'VITE', 'GIT'],
       description: 'Um portfólio interativo que revive a nostalgia dos computadores dos anos 80/90, com uma interface inspirada no clássico Macintosh.',

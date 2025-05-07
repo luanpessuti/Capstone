@@ -3,7 +3,7 @@ import SkillBadge from './Shared/SkillBadge';
 import './About.css';
 
 const About = ({ onBack }) => {
-  const skills = ['JavaScript', 'HTML', 'CSS','React','Vite','TypeScipt', 'Tailwind CSS', 'Node.js', 'Git', 'PostgreSQL', 'Express', 'jQuery',];
+  const skills = ['JavaScript', 'HTML', 'CSS','React','TypeScipt', 'Tailwind CSS', 'Next.js', 'Vite', 'Git','Node.js', 'PostgreSQL','MongoDB', 'Express', 'jQuery',];
 
   return (
     <motion.div
