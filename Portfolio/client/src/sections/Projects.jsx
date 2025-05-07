@@ -10,7 +10,7 @@ const Projects = ({ onBack }) => {
     {
       id: 1,
       name: 'FURIA Live Chat',
-      tech: ['Next.js','React', 'TypeScript', 'Tailwind', 'Framer Motion','MongodDB', 'GIT'],
+      tech: ['React', 'TypeScript', 'Tailwind','Node.js','Next.js', 'API Routes','MongodDB', 'GIT'],
       description: 'Um componente de chat ao vivo desenvolvido para um cenário fictício da equipe de eSports FURIA, combinando transmissão de vídeo, painel de partidas e mensagens em tempo real. O foco foi criar uma experiência visual impactante, responsiva e com layout dinâmico, especialmente adaptado para diferentes tamanhos de tela.',
       year: '2025',
       image: '/assets/projects/case-furiagg.png',
